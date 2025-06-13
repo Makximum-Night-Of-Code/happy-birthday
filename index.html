@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <title>Test</title>
+    <div>    <!-- шрифти -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    </div>
+</head>
+<body>
+    <header> <!-- перша частина - попередження про демо -->
+        <img src="./SVG's/alarm.svg" alt="годинник">
+        <p>Увага! Це демо версія сайту. Деякі функції можуть бути недоступними, а також можуть бути баги.</p>
+    </header>
+
+    <main>
+        <section class="HB_Enter"> <!-- друга частина - вхід на сайт -->
+            <div class="flower-circle">
+                    <!-- Квіточка -->
+                <svg class="flowerSVG" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-flower h-12 w-12 text-pink-500"><circle cx="12" cy="12" r="3"></circle><path d="M12 16.5A4.5 4.5 0 1 1 7.5 12 4.5 4.5 0 1 1 12 7.5a4.5 4.5 0 1 1 4.5 4.5 4.5 4.5 0 1 1-4.5 4.5"></path><path d="M12 7.5V9"></path><path d="M7.5 12H9"></path><path d="M16.5 12H15"></path><path d="M12 16.5V15"></path><path d="m8 8 1.88 1.88"></path><path d="M14.12 9.88 16 8"></path><path d="m8 16 1.88-1.88"></path><path d="M14.12 14.12 16 16"></path></svg>
+
+                    <!-- Зірочка -->
+                <svg class="starSVG" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star h-8 w-8 fill-yellow-400 text-yellow-500"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+            </div>
+
+            <!-- <h1>Вітаю з днем народження!</h1> -->
+            <h1>Вітаю з днем народження!</h1>
+            <p>Від найкращого друга з найкращими побажаннями</p>
+
+            <audio id="Happy_Birthday" src="./audio/happy birthday.mp3"></audio>
+            <div class="button-wrapper">
+                <button onclick="happyButton()">Тицьни на мене
+                    <img class="smile" src="./SVG's/happy face.svg" alt="веселий смайлик">
+                </button>
+            </div>
+
+            <div class="card-wrapper">
+                <div class="card-container" onclick="this.classList.toggle('flipped')">
+                    <div class="card-front">
+                        <h2>Лист із теплими побажаннями</h2>
+                        <p>Натисни, щоб перевернути</p>
+                        <h3>Від: Максима</h3>
+                        <h3>Для: Соломії</h3>
+                        <img class="heart" src="./SVG's/heart.svg" alt="сердечко">
+                    </div>
+
+                    <div class="card-back">
+                        <h2>З Днем народження, моя няшна-милашка Солька!</h2>
+                        <p>Від щирого серця вітаю тебе з таким прекрасним і особливим днем! Бажаю тобі безмежного щастя, міцного здоров'я й натхнення здійснювати всі свої мрії.</p>
+                        <p>Нехай кожен день буде сповнений радості, усмішок і приємних сюрпризів. Ти — найкраща, найрозумніша й найчарівніша!</p>
+                        <h3>Люблю тебе, моя тяночка🌸</h3>
+                        <img class="heart" src="./SVG's/heart.svg" alt="сердечко">
+                    </div>
+                </div>
+            </div>
+
+
+
+        </section>
+
+        <div class="flower-fall">
+            <span>🌸</span><span>🌸</span><span>🌸</span><span>🌸</span>
+        </div>
+
+        <section class="virtual-bouquet">
+
+            <h2>
+                <div>
+                    <svg class="flowerSVG" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-flower h-12 w-12 text-pink-500"><circle cx="12" cy="12" r="3"></circle><path d="M12 16.5A4.5 4.5 0 1 1 7.5 12 4.5 4.5 0 1 1 12 7.5a4.5 4.5 0 1 1 4.5 4.5 4.5 4.5 0 1 1-4.5 4.5"></path><path d="M12 7.5V9"></path><path d="M7.5 12H9"></path><path d="M16.5 12H15"></path><path d="M12 16.5V15"></path><path d="m8 8 1.88 1.88"></path><path d="M14.12 9.88 16 8"></path><path d="m8 16 1.88-1.88"></path><path d="M14.12 14.12 16 16"></path></svg>
+
+                    <span>Віртуальний букетик побажань</span>
+                </div>
+            </h2>
+
+            <p class="section-description">
+                Кожна квіточка тут — побажання для тебе. Лови атмосферу тепла й любові🌷.
+            </p>
+
+            <div class="grid-container">
+                <div class="bg_cards_2Section">
+                <h4>🌸</h4>         
+                <p>Гарного настрою щодня</p>
+            </div>
+            <div class="bg_cards_2Section">
+                <h4>🌼</h4>         
+                <p>Щоб мрії збувались</p>
+            </div>
+            <div class="bg_cards_2Section">
+                <h4>🌷</h4>         
+                <p>Тепла від друзів і рідних</p>
+            </div>
+            <div class="bg_cards_2Section">
+                <h4>🌺</h4>         
+                <p>Багато щирих усмішок</p>
+            </div>
+            <div class="bg_cards_2Section">
+                <h4>🌹</h4>         
+                <p>Любові, якої заслуговуєш</p>
+            </div>
+            <div class="bg_cards_2Section">
+                <h4>🌻</h4>         
+                <p>Натхнення і нових ідей</p>
+            </div>
+            </div>        
+            
+        </section>
+
+        <div class="flower-fall">
+            <span>🌸</span><span>🌸</span><span>🌸</span><span>🌸</span>
+        </div>
+
+        <section class="verse-section">
+
+            <h2>
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="1 1 22 22" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-pencil h-8 w-8 text-pink-400">
+                        <path d="m18 2 4 4L8.5 19.5 4 20l.5-4.5Z"/>
+                        <path d="m13 6 5 5"/>
+                    </svg>
+
+                    <span>Віршик</span>
+                </div>
+            </h2>
+
+            <p class="section-description">
+            У цих рядках — не просто слова. Це тепло, яке не передати навіть звичайними словами.<br>
+            Прочитавши його, ти, можливо, відчуєш, як щось ніжне торкнеться твого серця...
+            </p>
+
+            <div class="verse-wrapper">
+                <p class="verse">У день, коли усе чарує,<br>
+                Коли співає кожен цвіт,<br>
+                Нехай любов тебе цілує,<br>
+                Дарує радісний привіт.</p>
+
+                <p class="verse">Нехай усмішка не зникає,<br>
+                А серце ніжністю горить.<br>
+                Весна у душу заглядає<br>
+                І надихає просто жить.</p>
+
+                <p class="verse">Бажаю щастя і натхнення,<br>
+                В обіймах — тепла і добра.<br>
+                Нехай збуваються бажання,<br>
+                А поруч буде дивина.</p>
+
+                <p class="verse">Бо ти — немов яскрава зірка,<br>
+                Що світить, навіть у дощі.<br>
+                І цей віршик — то маленька<br>
+                Іскринка в світлій тиші...</p>
+            </div>
+        </section>
+
+        <div class="flower-fall">
+            <span>🌸</span><span>🌸</span><span>🌸</span><span>🌸</span>
+        </div>
+
+        <section class="virtual-gifts">
+
+            <h2>
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-gift h-6 w-6 text-pink-500"><rect x="3" y="8" width="18" height="4" rx="1"></rect><path d="M12 8v13"></path><path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"></path><path d="M7.5 8a2.5 2.5 0 0 1 0-5A4.8 8 0 0 1 12 8a4.8 8 0 0 1 4.5-5 2.5 2.5 0 0 1 0 5"></path></svg>
+
+                    <span>Віртуальні подаруночки</span>
+                </div>
+            </h2>
+
+            <p class="section-description">
+                Тут зібрані невеликі віртуальні даруночки, кожен із них — з сенсом і любов’ю💖.<br>
+                <strong>Натисни на будь-який подарунок</strong>, щоб побачити приховане повідомлення!
+            </p>
+
+            <div class="grid-container">
+                <div class="bg_cards_4Section" onclick="showBubble(this)">
+                    <h4>🍫</h4>     
+                    <h3>Шоколадка</h3>    
+                    <p>Солодкий подарунок для найсолодшої дівчини</p>
+                    <div class="bubble">«Солодке для найсолодшої, логічно ж😋»</div>
+                </div>
+                <div class="bg_cards_4Section" onclick="showBubble(this)">
+                    <h4>💍</h4>     
+                    <h3>Кільце</h3>    
+                    <p>Ні-ні, не пропозиція… Просто ти для мене коштовна</p>
+                    <div class="bubble">«Нехай ця прикраса підкреслить твою природну красу!✨»</div>
+                </div>
+                <div class="bg_cards_4Section" onclick="showBubble(this)">
+                    <h4>🧸</h4>     
+                    <h3>М'який ведмедик</h3>    
+                    <p>Для обіймів і гарного настрою</p>
+                    <div class="bubble">«Обіймаю тебе цим м'яким ведмедиком!🤗»</div>
+                </div>
+                <div class="bg_cards_4Section" onclick="showBubble(this)">
+                    <h4>📸</h4>     
+                    <h3>Фотоапарат</h3>    
+                    <p>Для твоїх найкращих спогадів</p>
+                    <div class="bubble">«Ну, а зараз посміхнись, бо це момент щастя📸»</div>
+                </div>
+                <div class="bg_cards_4Section" onclick="showBubble(this)">
+                    <h4>🪄</h4>     
+                    <h3>Чарівна паличка</h3>    
+                    <p>Щоб твої бажання збувалися одразу ж!</p>
+                    <div class="bubble">«Коли не віриться — просто помахай нею😉»</div>
+                </div>
+                <div class="bg_cards_4Section" onclick="showBubble(this)">
+                    <h4>☕</h4>     
+                    <h3>Горнятко какао</h3>    
+                    <p>Для тепла навіть у найпохмуріші дні</p>
+                    <div class="bubble">«Смакуй і завжди згадуй про мене🍫☕»</div>
+                </div>
+                <div class="bg_cards_4Section" onclick="showBubble(this)">
+                    <h4>🎨</h4>     
+                    <h3>Набір для малювання</h3>    
+                    <p>Для створення світу, де ти щаслива!</p>
+                    <div class="bubble">«Твори, як відчуваєш — воно буде прекрасним, таким же як і ти🎨»</div>
+                </div>
+                <div class="bg_cards_4Section" onclick="showBubble(this)">
+                    <h4>🌟</h4>     
+                    <h3>Зірочка бажань</h3>    
+                    <p>Загадай — і твоя мрія здійсниться</p>
+                    <div class="bubble">«Загадай щось потаємне… вона почує💫»</div>
+                </div>
+                <div class="bg_cards_4Section" onclick="showBubble(this)">
+                    <h4>🎁</h4>     
+                    <h3>Сюрприз</h3>    
+                    <p>Відкривається лише тими, хто усміхається</p>
+                    <div class="bubble">«Знаєш, цей подарунок — ніщо в порівнянні з твоєю усмішкою ☀️»</div>
+                </div>
+            </div>        
+            
+        </section>
+
+        <div class="flower-fall">
+            <span>🌸</span><span>🌸</span><span>🌸</span><span>🌸</span>
+        </div>
+
+        <section class="slider">
+
+            <h2>
+                <div>
+                    <img src="./SVG's/photo.svg" alt="фото">
+                    <span>Галерея</span>
+                </div>
+            </h2>
+
+            <p class="section-description">
+                Фотографії, які говорять більше, ніж прості слова.
+            </p>
+
+            <div class="content swiper">
+                <ul class="swiper-wrapper">
+                    <li class="swiper-slide">
+                        <div class="card">
+                            <div class="card-content">
+                                <div class="image-border-white">
+                                    <div class="image-border-gradient">
+                                        <img src="./slider-photo/niashka1.jpg" alt="няшечка-Солічка 1">
+                                    </div>
+                                </div>
+
+                                <div class="description">
+                                    <h3>Очі, в яких можна загубитися<br>і не шукати вихід...</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="swiper-slide">
+                        <div class="card">
+                            <div class="card-content">
+                                <div class="image-border-white">
+                                    <div class="image-border-gradient">
+                                        <img src="./slider-photo/niashka2.png" alt="няшечка-Солічка 2">
+                                    </div>
+                                </div>
+
+                                <div class="description">
+                                    <h3>Це фото — доказ того,<br>що краса існує</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="swiper-slide">
+                        <div class="card">
+                            <div class="card-content">
+                                <div class="image-border-white">
+                                    <div class="image-border-gradient">
+                                        <img src="./slider-photo/niashka3.png" alt="няшечка-Солічка 3">
+                                    </div>
+                                </div>
+
+                                <div class="description">
+                                    <h3>Проста посмішка,<br>проте робить день кращим</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="swiper-slide">
+                        <div class="card">
+                            <div class="card-content">
+                                <div class="image-border-white">
+                                    <div class="image-border-gradient">
+                                        <img src="./slider-photo/cutie_cat1.jpg" alt="милий кіт 1">
+                                    </div>
+                                </div>
+
+                                <div class="description">
+                                    <h3>Якби твоя ніжність мала<br>форму — це був би цей кіт</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="swiper-slide">
+                        <div class="card">
+                            <div class="card-content">
+                                <div class="image-border-white">
+                                    <div class="image-border-gradient">
+                                        <img src="./slider-photo/cutie_cat2.jpg" alt="милий кіт 2">
+                                    </div>
+                                </div>
+
+                                <div class="description">
+                                    <h3>Цей кіт злий,<br>бо ти ще миліша за нього</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="swiper-slide">
+                        <div class="card">
+                            <div class="card-content">
+                                <div class="image-border-white">
+                                    <div class="image-border-gradient">
+                                        <img src="./slider-photo/cutie_cat3.jpg" alt="милий кіт 3">
+                                    </div>
+                                </div>
+
+                                <div class="description">
+                                    <h3>А це ти, коли<br>тільки но прокидаєшся</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="swiper-slide">
+                        <div class="card">
+                            <div class="card-content">
+                                <div class="image-border-white">
+                                    <div class="image-border-gradient">
+                                        <img src="./slider-photo/tianka1.png" alt="тяночка 1">
+                                    </div>
+                                </div>
+
+                                <div class="description">
+                                    <h3>Звісно, ти красивіша за будь-яку<br>аніме-тянку, але ця схожа трохи</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="swiper-slide">
+                        <div class="card">
+                            <div class="card-content">
+                                <div class="image-border-white">
+                                    <div class="image-border-gradient">
+                                        <img src="./slider-photo/tianka2.png" alt="тяночка 2">
+                                    </div>
+                                </div>
+
+                                <div class="description">
+                                    <h3>Ця тянка вважає себе найкращою<br>(вона не знає про тебе)</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="swiper-slide">
+                        <div class="card">
+                            <div class="card-content">
+                                <div class="image-border-white">
+                                    <div class="image-border-gradient">
+                                        <img src="./slider-photo/tianka3.png" alt="тяночка 3">
+                                    </div>
+                                </div>
+
+                                <div class="description">
+                                    <h3>Знаєш, у цьому світі безліч краси…<br>але жодна не зрівняється з твоєю</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="swiper-pagination"></div>
+
+            <div class="swiper-button swiper-button-prev"></div>
+            <div class="swiper-button swiper-button-next"></div>
+        </section>
+
+        <div class="flower-fall">
+            <span>🌸</span><span>🌸</span><span>🌸</span><span>🌸</span>
+        </div>
+        
+        <section class="last-wish">
+            <div class="card">
+                <h2>Нехай цей день буде чарівним!</h2>
+                <p>Нехай цей день принесе тобі багато квітів, посмішок та приємних сюрпризів. Ти заслуговуєш тільки на найкраще!</p>
+
+                <div class="SVGs">
+                    <svg class="flower" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-flower h-8 w-8 text-pink-500"><circle cx="12" cy="12" r="3"></circle><path d="M12 16.5A4.5 4.5 0 1 1 7.5 12 4.5 4.5 0 1 1 12 7.5a4.5 4.5 0 1 1 4.5 4.5 4.5 4.5 0 1 1-4.5 4.5"></path><path d="M12 7.5V9"></path><path d="M7.5 12H9"></path><path d="M16.5 12H15"></path><path d="M12 16.5V15"></path><path d="m8 8 1.88 1.88"></path><path d="M14.12 9.88 16 8"></path><path d="m8 16 1.88-1.88"></path><path d="M14.12 14.12 16 16"></path></svg>
+
+                    <svg class="heart" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart h-8 w-8 text-red-500"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path></svg>
+
+                    <svg class="star" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star h-8 w-8 text-yellow-500"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+
+                    <svg class="gift" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-gift h-8 w-8 text-purple-500"><rect x="3" y="8" width="18" height="4" rx="1"></rect><path d="M12 8v13"></path><path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"></path><path d="M7.5 8a2.5 2.5 0 0 1 0-5A4.8 8 0 0 1 12 8a4.8 8 0 0 1 4.5-5 2.5 2.5 0 0 1 0 5"></path></svg>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- <div class="top-svg">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path fill="#ffcce0" fill-opacity="1" d="M0,160 C360,240 1080,80 1440,160 L1440,320 L0,320 Z"/>
+        <text x="50%" y="70%" text-anchor="middle" fill="#ff69b4" font-size="24" font-family="cursive">🌸 Зроблено з любов'ю 🌸</text>
+        </svg>
+    </div> -->
+
+    <footer>
+
+        <div class="up-content-footer">
+            <div class="flower-circle">
+                    <!-- Квіточка -->
+                <svg class="flowerSVG" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M12 16.5A4.5 4.5 0 1 1 7.5 12 4.5 4.5 0 1 1 12 7.5a4.5 4.5 0 1 1 4.5 4.5 4.5 4.5 0 1 1-4.5 4.5"></path><path d="M12 7.5V9"></path><path d="M7.5 12H9"></path><path d="M16.5 12H15"></path><path d="M12 16.5V15"></path><path d="m8 8 1.88 1.88"></path><path d="M14.12 9.88 16 8"></path><path d="m8 16 1.88-1.88"></path><path d="M14.12 14.12 16 16"></path></svg>
+
+                <svg class="heart-footer" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart h-8 w-8 text-pink-300 animate-pulse fill-pink-300"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path></svg>
+
+                <svg class="star-footer" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star h-8 w-8 text-yellow-300 animate-spin-slow fill-yellow-300"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+            </div>
+
+            <p>З днем народження!</p>
+
+            <div class="ping-wrapper">
+                <span class="animate-ping ping-1"></span>
+                <span class="animate-ping ping-2"></span>
+                <span class="animate-ping ping-3"></span>
+            </div>
+        </div>
+
+        <div class="down-footer">
+            <p>Створено з любов'ю для найкращої дівчини в світі</p>
+            <h4>Від найкращого друга який інколи може надоїдати</h4>
+
+            <div class="end">
+                <span>© 2025</span>
+                <span>•</span>
+                <span>Всі права захищені</span>
+                <span>•</span>
+                <span>З найкращими побажаннями</span>
+            </div>
+        </div>
+
+    </footer>
+
+    <script src="scripts/audio-confetti-script.js"></script>
+    <script src="scripts/buble-script.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="scripts/slider-script.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+    <script src="scripts/flipper-card.js"></script>
+</body>
+</html>
