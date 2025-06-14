@@ -257,12 +257,22 @@ header {
     
     }
 
-    .grid-container {
+    /* .grid-container {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 24px; 
 
         margin-bottom: 20px;
+    } */
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 30px;
+
+        justify-items: center; /* центрує карточки по горизонталі */
+        margin-bottom: 20px;
+        padding: 0 20px;
     }
 
     .bg_cards_2Section {
@@ -374,7 +384,7 @@ header {
         }
     }
 
-    .grid-container {
+    /* .grid-container {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 30px; 
@@ -383,13 +393,23 @@ header {
         cursor: pointer;
 
         margin-bottom: 20px;
+    } */
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 30px;
+
+        justify-items: center; /* центрує карточки по горизонталі */
+        margin-bottom: 20px;
+        padding: 0 20px;
     }
 
     .bg_cards_4Section {
         position: relative;
 
         background: #fff0f6;
-        border: 4px, solid, #ff99c8;
+        border: 4px solid #ff99c8;
         border-radius: 20px;
         padding: 20px;
         width: 300px;
@@ -506,7 +526,7 @@ header {
         }
     }
 
-    ul {
+    .swiper-wrapper {
         display: flex;
         padding: 0;
         margin: 0;
@@ -515,6 +535,16 @@ header {
 
         scroll-behavior: smooth;
         transition: transform 0.3s ease;
+    }
+
+    .swiper {
+        width: 100%;
+        padding: 20px 0;
+    }
+
+        .swiper-slide {
+        width: auto;
+        box-sizing: border-box;
     }
 
     .content {
@@ -603,12 +633,17 @@ header {
     }
 
     .swiper-button {
-        color: #ff76c6;
-        padding: 20px;
-        background-color: white;
+        color: white;
+        background: linear-gradient(135deg, #ff9ec4, #ff6fc3);
+        border: 2px solid white;
         border-radius: 35px;
-        top: 65%;
-        transform: translateY(-50%);
+        padding: 20px;
+        box-shadow: 0 4px 12px rgba(255, 111, 195, 0.4);
+        pointer-events: all;
+        transition: transform 0.2s ease;
+    }
+    .swiper-button:hover {
+        transform: scale(1.05);
     }
 
     .swiper-button-prev {
@@ -618,39 +653,18 @@ header {
     .swiper-button-next {
         right: 65px;
     }
-}
 
-@keyframes fall {
-    0% {
-        transform: translateY(-10px) rotate(0deg);
-        opacity: 0;
-    }
-    50% {
-        opacity: 1;
-    }
-    100% {
-        transform: translateY(10px) rotate(10deg);
-        opacity: 0;
-    }
-}
-
-@keyframes bounce {
-    0%, 100% {
-        transform: translateY(-10px) rotate(2.5deg);
-        animation-timing-function: cubic-bezier(.8, 0, 1, 1);
-    }
-    50% {
-        transform: translateY(5px) rotate(-90deg);
-        animation-timing-function: cubic-bezier(0, 0, .2, 1);
-    }
-}
-
-@keyframes pulse {
-    0%, 100% {
-        opacity: 1;
-    }
-    50% {
-        opacity: 0.5;
+    .swiper-nav-wrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none; /* Щоб не перекривало свайпи */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 10;
     }
 }
 
@@ -858,6 +872,40 @@ footer {
     }
 }
 
+@keyframes fall {
+    0% {
+        transform: translateY(-10px) rotate(0deg);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(10px) rotate(10deg);
+        opacity: 0;
+    }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(-10px) rotate(2.5deg);
+        animation-timing-function: cubic-bezier(.8, 0, 1, 1);
+    }
+    50% {
+        transform: translateY(5px) rotate(-90deg);
+        animation-timing-function: cubic-bezier(0, 0, .2, 1);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
 @keyframes spin-slow {
     0% {
     transform: rotate(0deg);
@@ -873,3 +921,4 @@ footer {
         opacity: 0;
     }
 }
+
