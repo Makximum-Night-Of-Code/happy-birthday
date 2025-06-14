@@ -257,22 +257,12 @@ header {
     
     }
 
-    /* .grid-container {
+    .grid-container {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 24px; 
 
         margin-bottom: 20px;
-    } */
-
-    .grid-container {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 30px;
-
-        justify-items: center; /* центрує карточки по горизонталі */
-        margin-bottom: 20px;
-        padding: 0 20px;
     }
 
     .bg_cards_2Section {
@@ -291,7 +281,8 @@ header {
 
         p {
             font-size: 25px;
-            font-family: "Oswald", sans-serif;
+            font-weight: 500;
+            font-family: "Ubuntu", sans-serif;
         }
 
         h4 {
@@ -384,7 +375,7 @@ header {
         }
     }
 
-    /* .grid-container {
+    .grid-container {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 30px; 
@@ -393,16 +384,6 @@ header {
         cursor: pointer;
 
         margin-bottom: 20px;
-    } */
-
-    .grid-container {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 30px;
-
-        justify-items: center; /* центрує карточки по горизонталі */
-        margin-bottom: 20px;
-        padding: 0 20px;
     }
 
     .bg_cards_4Section {
@@ -871,6 +852,21 @@ footer {
         }
     }
 }
+
+@media (max-width: 1125px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr) !important;
+    background-color: #9333ea; /* тимчасово для перевірки */
+  }
+}
+
+@media (max-width: 850px) {
+  .grid-container {
+    grid-template-columns: repeat(1, 1fr) !important;
+    background-color: #9333ea; /* тимчасово для перевірки */
+  }
+}
+
 
 @keyframes fall {
     0% {
