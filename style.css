@@ -853,17 +853,16 @@ footer {
     }
 }
 
-@media (max-width: 1125px) {
+/* @media (max-width: 1125px) { */
+@media (max-width: 1285px) {
   .grid-container {
     grid-template-columns: repeat(2, 1fr) !important;
-    background-color: #9333ea; /* тимчасово для перевірки */
   }
 }
 
 @media (max-width: 850px) {
   .grid-container {
     grid-template-columns: repeat(1, 1fr) !important;
-    background-color: #9333ea; /* тимчасово для перевірки */
   }
 }
 
